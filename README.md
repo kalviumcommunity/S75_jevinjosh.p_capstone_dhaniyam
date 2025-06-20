@@ -44,6 +44,7 @@
 - User Profile with Appointment History
 - Ration Collection Timings
 - Express Queue for elderly or differently-abled users
+- Multi-language Support
 - Offline Access for Past Records *(optional)*
 - Notifications for Appointment Reminders *(optional)*
 
