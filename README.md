@@ -8,7 +8,6 @@
 ### 🔹 Frontend
 - React.js (JSX)
 - Tailwind CSS
-- Framer Motion
 - React Router DOM
 - Day.js / React-Date-Picker
 
@@ -52,10 +51,10 @@
 
 ##  Deployment
 - **Frontend**: Vercel / Netlify
-- **Backend**: Render / Railway / Heroku
+- **Backend**: Render / Railway
 - **Database**: MongoDB Atlas
 - **Domain**: Custom via Vercel/Netlify (optional)
 
 ---
 
-📌 *Note: Address input for appointments is manual. Users must enter their ration address to see relevant nearby centers instead of random suggestions.*
+ *Note: Address input for appointments is manual. Users must enter their ration address to see relevant nearby centers instead of random suggestions.*
