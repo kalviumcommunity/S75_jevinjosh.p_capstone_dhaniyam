@@ -15,7 +15,9 @@ const Stock = () => {
       <h2 className="text-xl font-bold mb-4">Available Stock</h2>
       <ul className="list-disc pl-4">
         {stockItems.map((item, index) => (
-          <li key={index}>{item.item} - {item.quantity}</li>
+          <li key={index}>
+            {item.item} - {item.quantity}
+          </li>
         ))}
       </ul>
     </div>
