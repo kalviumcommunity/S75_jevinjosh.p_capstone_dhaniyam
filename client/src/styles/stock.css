@@ -1,0 +1,221 @@
+/* 🌼 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #fff8f0, #ffd7b5);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* 🌾 Main Container */
+.stock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ✨ Decorative Background Shapes */
+.stock-container::before,
+.stock-container::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 166, 0, 0.3), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+.stock-container::before {
+  top: -60px;
+  left: -60px;
+}
+.stock-container::after {
+  bottom: -60px;
+  right: -60px;
+}
+
+/* 🏷️ Page Header */
+.stock-header {
+  font-size: 2.6rem;
+  color: #ff7300;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 2px 8px rgba(255, 115, 0, 0.25);
+  text-align: center;
+  z-index: 2;
+}
+
+/* 🔍 Filter Panel */
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  z-index: 2;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #ff7a00;
+}
+
+.filter-input,
+.filter-select {
+  padding: 0.7rem 1.2rem 0.7rem 2.2rem;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 14px rgba(255, 122, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px rgba(255, 122, 0, 0.3);
+  transform: scale(1.03);
+}
+
+/* 🧺 Stock Grid */
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+/* 📦 Stock Card */
+.stock-card {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  backdrop-filter: blur(15px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stock-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 122, 0, 0.1), transparent 70%);
+  transform: rotate(30deg);
+  z-index: 0;
+}
+
+.stock-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(255, 122, 0, 0.2);
+}
+
+.stock-card h3,
+.stock-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ff7300;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.stock-category {
+  display: inline-block;
+  background: rgba(255, 122, 0, 0.15);
+  color: #ff7300;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  margin-bottom: 0.4rem;
+  z-index: 1;
+}
+
+.stock-quantity {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  z-index: 1;
+}
+
+/* 💫 Remove underline from links */
+.stock-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 🎨 Buttons */
+.card-btn,
+.cta-button {
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #ff8a00, #ff5e00);
+  color: #fff;
+  padding: 0.7rem 1.6rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
+  z-index: 2;
+}
+
+.card-btn:hover,
+.cta-button:hover {
+  background: linear-gradient(90deg, #ff6b00, #e74c00);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 94, 0, 0.4);
+}
+
+/* 🚫 No Items Found */
+.no-items {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 2rem;
+  z-index: 2;
+}
+
+/* 🏠 Return Home */
+.return-home {
+  margin-top: 3rem;
+  z-index: 2;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .filter-panel {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stock-grid {
+    grid-template-columns: 1fr;
+  }
+  .stock-header {
+    font-size: 2rem;
+  }
+}
